@@ -1,0 +1,43 @@
+{
+  "name": "effector-types",
+  "version": "0.1.0",
+  "description": "Standard capability types for AI agent tools — the lib.d.ts for Effectors",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --test tests/",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "effector",
+    "ai-agent",
+    "capability-types",
+    "type-system",
+    "mcp",
+    "skill",
+    "composition"
+  ],
+  "author": "effectorHQ Contributors",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/effectorHQ/effector-types.git"
+  },
+  "homepage": "https://github.com/effectorHQ/effector-types",
+  "bugs": {
+    "url": "https://github.com/effectorHQ/effector-types/issues"
+  },
+  "files": [
+    "dist/",
+    "schemas/"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
