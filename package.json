@@ -1,13 +1,13 @@
 {
   "name": "effector-types",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Standard capability types for AI agent tools — the lib.d.ts for Effectors",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "test": "node --test tests/",
+    "test": "node --test tests/*.test.js",
     "lint": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
@@ -32,7 +32,8 @@
   },
   "files": [
     "dist/",
-    "schemas/"
+    "schemas/",
+    "types.json"
   ],
   "engines": {
     "node": ">=18.0.0"

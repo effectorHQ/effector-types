@@ -132,19 +132,40 @@ This means the ecosystem is **open to extension without coordination.** You defi
 npm install effector-types
 ```
 
-### Annotate a SKILL.md
+### types.json — Machine-Readable Type Catalog
 
-Add type annotations to your existing skills:
+`types.json` is the canonical, machine-readable catalog of all standard Effector types. Any tool (JS, Python, Go, Rust) can consume it — no TypeScript compilation required.
 
-```yaml
----
-name: github-pr-review
-version: 1.2.0
-effector:
-  input: CodeDiff
-  output: ReviewReport
-  context: [Repository, CodingStandards]
----
+```bash
+# Validate type names from effector.toml manifests
+node effector-spec/scripts/validate-manifest.js skill/effector.toml --types types.json
+```
+
+The catalog includes 35+ types across input/output/context roles, with fields, aliases, subtype relations, and usage frequency data.
+
+### Registry API
+
+```typescript
+import { isKnownType, getTypeRole, isNameCompatible } from 'effector-types/registry';
+
+isKnownType('CodeDiff')                           // true
+getTypeRole('JSON')                                // 'both' (input + output)
+isNameCompatible('SecurityReport', 'ReviewReport') // true (subtype)
+isNameCompatible('PlainText', 'String')            // true (alias)
+```
+
+### Annotate an effector.toml
+
+```toml
+[effector]
+name = "github-pr-review"
+version = "1.2.0"
+type = "skill"
+
+[effector.interface]
+input = "CodeDiff"
+output = "ReviewReport"
+context = ["GitHubCredentials", "Repository"]
 ```
 
 ### Type-check composition
@@ -194,8 +215,8 @@ Anyone can publish a type package. The [contribution guide](./CONTRIBUTING.md) e
 
 ## Roadmap
 
-- [ ] **v0.1** — Core data types, context types, basic type checker CLI
-- [ ] **v0.2** — Composition types, pipeline type-checking
+- [x] **v0.1** — Core data types, context types, structural subtyping
+- [x] **v0.2** — types.json catalog, registry API, name-based compatibility, wired into effector-compose + effector-graph
 - [ ] **v0.3** — Discovery protocol integration, substitutability queries
 - [ ] **v0.4** — AI-powered type inference for untyped SKILL.md and MCP tools
 - [ ] **v1.0** — Stable type system, community registry for domain types
