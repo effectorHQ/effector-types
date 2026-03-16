@@ -1,6 +1,7 @@
 # effector-types
 
 [![npm version](https://img.shields.io/badge/npm-effector--types-E03E3E.svg)](https://www.npmjs.com/package/effector-types)
+[![CI](https://github.com/effectorHQ/effector-types/actions/workflows/test.yml/badge.svg)](https://github.com/effectorHQ/effector-types/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)](#)
 
@@ -124,13 +125,19 @@ Types use **structural subtyping** (like TypeScript, not like Java). Two types a
 
 This means the ecosystem is **open to extension without coordination.** You define a new type that structurally matches an existing one, and it automatically composes with everything that existing type composes with.
 
-## Usage
-
-### Install
+## Install
 
 ```bash
 npm install effector-types
 ```
+
+```typescript
+import { TypeRegistry } from 'effector-types';
+```
+
+See the published package on npm: **https://www.npmjs.com/package/effector-types**
+
+## Usage
 
 ### types.json — Machine-Readable Type Catalog
 
