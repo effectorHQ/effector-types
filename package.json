@@ -1,6 +1,6 @@
 {
-  "name": "effector-types",
-  "version": "0.2.0",
+  "name": "@effectorhq/types",
+  "version": "1.0.0",
   "description": "Standard capability types for AI agent tools — the lib.d.ts for Effectors",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -39,6 +39,7 @@
     "node": ">=18.0.0"
   },
   "devDependencies": {
+    "@types/node": "^25.5.0",
     "typescript": "^5.4.0"
   }
 }

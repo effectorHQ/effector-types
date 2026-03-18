@@ -1,6 +1,6 @@
 # effector-types
 
-[![npm version](https://img.shields.io/badge/npm-effector--types-E03E3E.svg)](https://www.npmjs.com/package/effector-types)
+[![npm version](https://img.shields.io/badge/npm-%40effectorhq%2Ftypes-E03E3E.svg)](https://www.npmjs.com/package/@effectorhq/types)
 [![CI](https://github.com/effectorHQ/effector-types/actions/workflows/test.yml/badge.svg)](https://github.com/effectorHQ/effector-types/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Status: Alpha](https://img.shields.io/badge/status-alpha-orange.svg)](#)
@@ -13,12 +13,12 @@
 
 Every AI agent tool has an implicit interface: it takes *something*, produces *something*, and needs *something* from the environment. But today, these interfaces are invisible. You chain two MCP tools and discover at runtime that they're incompatible. You compose three SKILL.md files and find out the output of skill A doesn't match the input of skill B — after burning tokens, time, and API calls.
 
-`effector-types` makes these interfaces explicit.
+`@effectorhq/types` makes these interfaces explicit.
 
 It provides a standard library of **capability types** — reusable type definitions for the inputs, outputs, and contexts that AI agent tools commonly work with. Think of it as the foundation that enables type-checked composition of agent capabilities.
 
 ```typescript
-import { CodeDiff, ReviewReport, Repository } from 'effector-types';
+import { CodeDiff, ReviewReport, Repository } from '@effectorhq/types';
 
 // Now your skill has a typed interface:
 // input: CodeDiff → output: ReviewReport, context: Repository
