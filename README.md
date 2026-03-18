@@ -128,14 +128,14 @@ This means the ecosystem is **open to extension without coordination.** You defi
 ## Install
 
 ```bash
-npm install effector-types
+npm install @effectorhq/types
 ```
 
 ```typescript
-import { TypeRegistry } from 'effector-types';
+import { TypeRegistry } from '@effectorhq/types';
 ```
 
-See the published package on npm: **https://www.npmjs.com/package/effector-types**
+See the published package on npm: **https://www.npmjs.com/package/@effectorhq/types**
 
 ## Usage
 
@@ -153,7 +153,7 @@ The catalog includes 35+ types across input/output/context roles, with fields, a
 ### Registry API
 
 ```typescript
-import { isKnownType, getTypeRole, isNameCompatible } from 'effector-types/registry';
+import { isKnownType, getTypeRole, isNameCompatible } from '@effectorhq/types/registry';
 
 isKnownType('CodeDiff')                           // true
 getTypeRole('JSON')                                // 'both' (input + output)
@@ -178,7 +178,7 @@ context = ["GitHubCredentials", "Repository"]
 ### Type-check composition
 
 ```typescript
-import { typeCheck } from 'effector-types/checker';
+import { typeCheck } from '@effectorhq/types/checker';
 
 const pipeline = ['code-change', 'code-review', 'merge-decision'];
 const result = typeCheck(pipeline);
@@ -192,7 +192,7 @@ if (!result.valid) {
 ### Search by type
 
 ```typescript
-import { discover } from 'effector-types/discovery';
+import { discover } from '@effectorhq/types/discovery';
 
 // Find all capabilities that take CodeDiff and produce any Report
 const matches = discover({ input: 'CodeDiff', output: '*Report' });

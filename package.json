@@ -33,7 +33,9 @@
   "files": [
     "dist/",
     "schemas/",
-    "types.json"
+    "types.json",
+    "LICENSE",
+    "README.md"
   ],
   "engines": {
     "node": ">=18.0.0"
