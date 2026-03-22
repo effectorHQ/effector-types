@@ -18,7 +18,7 @@ Promoted to stable. Package renamed to `@effectorhq/types`. No breaking API chan
 ## v0.2.0 — 2026-03-14
 
 ### Added
-- `types.json` — Machine-readable catalog of **36 standard Effector types** (15 input, 14 output, 11 context; with roles, fields, aliases, subtype relations, ClawHub frequency data)
+- `types.json` — Machine-readable catalog of **40 standard Effector types** (15 input, 14 output, 11 context; with roles, fields, aliases, subtype relations, ClawHub frequency data)
 - `src/registry.ts` — Type registry API: `isKnownType()`, `getTypeRole()`, `getTypeFields()`, `getSubtypes()`, `getSupertypes()`, `isNameCompatible()`
 - Name-based type compatibility: exact match, alias resolution, subtype relations, wildcard matching
 - Subtype relations: `SecurityReport <: ReviewReport`, `SlackMessage <: Notification`, `DiscordMessage <: Notification`
