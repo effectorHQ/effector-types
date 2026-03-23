@@ -1,7 +1,7 @@
 {
   "name": "@effectorhq/types",
   "version": "1.0.0",
-  "description": "Standard capability types for AI agent tools — the lib.d.ts for Effectors",
+  "description": "Standard capability types for AI agent tools \u2014 the lib.d.ts for Effectors",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -34,7 +34,7 @@
     "dist/",
     "schemas/",
     "types.json",
-    "LICENSE",
+    "LICENSE.md",
     "README.md"
   ],
   "engines": {
