@@ -1,3 +1,8 @@
+> **📦 Consolidated.** This package is now part of [`effectorHQ/effector`](https://github.com/OpenClawHQ/effectorhq) → `packages/types/`.
+> All active development continues in the monorepo. This repository remains available for reference.
+
+---
+
 # effector-types
 
 [![npm](https://img.shields.io/npm/v/@effectorhq/types?color=E03E3E&logo=npm&logoColor=white)](https://www.npmjs.com/package/@effectorhq/types)
